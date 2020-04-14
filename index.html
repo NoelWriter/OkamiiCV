@@ -179,6 +179,21 @@
                 .register('/serviceworker.js')
                 .then(function() { console.log("[Service Worker] Service Worker Registered"); });
       }
+
+      navigator.serviceWorker.ready.then(
+              function (serviceWorkerRegistration) {
+                var options = {
+                  userVisibleOnly: true,
+                  applicationServerKey: applicationServerKey
+                };
+                serviceWorkerRegistration.pushManager.subscribe(options).then(
+                        function (pushSubscription) {
+                          console.log(pushSubscription.endpoint);
+                        }, function (error) {
+                          console.log(error);
+                        }
+                );
+              });
     </script>
 
 
