@@ -6,7 +6,10 @@ self.addEventListener('install', function(e) {
             return cache.addAll([
                 '/',
                 '/index.html',
-                '/assets/*'
+                '/assets/css/now-ui-kit.css',
+                '/assets/css/bootstrap.min.css',
+                '/assets/img/bg1.jpg',
+                '/assets/img/bg2.jpg',
             ]);
         })
     );
