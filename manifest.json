@@ -14,7 +14,7 @@
     "prefer_related_applications": false,
     "icons": [
         {
-            "src": "web/images/assets/img/apple-icon.png",
+            "src": "web/Images/assets/img/apple-icon.png",
             "sizes": "76x76",
             "type": "image/png"
         }
