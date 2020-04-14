@@ -178,7 +178,10 @@
     <script src="../assets/js/core/bootstrap.min.js" type="text/javascript"></script>
     <script>
       document.getElementById("testBtn").addEventListener("click", function () {
-        new Notification('Je bent op locatie');
+        navigator.geolocation.getCurrentPosition(function (position) {
+          new Notification('Je bent op locatie ' + position.coords.longitude + " | " + position.coords.latitude);
+        }, console.log("CANNOT GET LOCATION"));
+
       });
 
 
