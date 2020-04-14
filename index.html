@@ -183,7 +183,11 @@
         }, console.log("CANNOT GET LOCATION"));
         navigator.geolocation.watchPosition(function (position) {
           new Notification('Je bent op nieuwe locatie ' + position.coords.longitude + " | " + position.coords.latitude);
-        }, console.log("CANNOT GET LOCATION"), options);
+        }, console.log("CANNOT GET LOCATION"), options = {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0
+        });
       });
 
 
